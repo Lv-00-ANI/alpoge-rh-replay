@@ -1,0 +1,299 @@
+{
+  "schema": "alpoge-rh-replay/single-node-receipt/1",
+  "generated_at": "2026-11-22T11:16:58.540680+08:00",
+  "claim": {
+    "author": "Levent Alpoge",
+    "date": "2026-11-20",
+    "note": "https://alpo.ge/remark.pdf",
+    "archive_parts": 14
+  },
+  "inputs": {
+    "parts": [
+      {
+        "name": "part01",
+        "bytes": 18000000,
+        "sha256": "86974b1c242ca7b6748f3299df4fc64ee0f6e06c776ac964fb64888101a3de77",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part02",
+        "bytes": 18000000,
+        "sha256": "1c2a2477354a9dfa97ff1ce54861e96ed885bd456fffbaaabc2028314a229c42",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part03",
+        "bytes": 18000000,
+        "sha256": "1465a23b1b579a881e24e5ffaf7c4c3727af28ea24741f1ec80e1d67947530a3",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part04",
+        "bytes": 18000000,
+        "sha256": "3929e327eecb4e2c5c7cae30e104e6a4a52fa6b82d28325bcda8e9da1c86893b",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part05",
+        "bytes": 18000000,
+        "sha256": "f25d7e80f7c4ad6d674aa18b323ca760f848857c8755501c149317c38a66c75d",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part06",
+        "bytes": 18000000,
+        "sha256": "a8c651a68327811b37dce3cca8eda5e0b2102fa227c0d395cbb7553e4dd69939",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part07",
+        "bytes": 18000000,
+        "sha256": "65c7e502a9b236a0f68d9e0aa6e089d4c09b9fc7a0960a149384063ccbe5e869",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part08",
+        "bytes": 18000000,
+        "sha256": "71b027ad6e4179c3a50ce72921e3fec0a2dd751ec7472ac2c644ad145a50ec7e",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part09",
+        "bytes": 18000000,
+        "sha256": "47718977ebaa8613f1647e93134479780db9320c5fa911463fd312a6257b796f",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part10",
+        "bytes": 18000000,
+        "sha256": "1d85ece78e0779cec26b0cce29c6462d9f90180e56d78120b152df101715240b",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part11",
+        "bytes": 18000000,
+        "sha256": "cf83a159d1a9540012229c376562587dd966da10cd657cbcef53acfd03232448",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part12",
+        "bytes": 18000000,
+        "sha256": "1aa5415bd2db83b2689afeeb946419303b3c4f599ae790ad74d38465f768b502",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part13",
+        "bytes": 18000000,
+        "sha256": "2de4edbce8ebdbfd0b94bc89bab518c7294209f408ec5b14a7be9e4832d9da81",
+        "matches_repo_parts_sha256": true
+      },
+      {
+        "name": "part14",
+        "bytes": 5275554,
+        "sha256": "53f8ea43a9b5dcab97b84a52f3ac2848711c844a5420a4c56418093bacb3c6f6",
+        "matches_repo_parts_sha256": true
+      }
+    ],
+    "assembled": {
+      "file": "lean.tar.gz",
+      "bytes": 239275554,
+      "sha256": "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc"
+    },
+    "all_parts_match_repo": true
+  },
+  "toolchain": {
+    "lean_version": "",
+    "lean_githash": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "manifest_sha256": "fee57ee9ed399d0a638ca955e5ad40a37a36eeb9b6dfd9f5964114fa7bbe4774",
+    "pinned_toolchain_file": "leanprover/lean4:v4.33.1",
+    "elan_version": "elan 4.2.4 (227caca13 2026-08-25)"
+  },
+  "environment": {
+    "hostname": "xiaomeng",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "kernel": "6.12.113+deb13-amd64",
+    "cpu_model": "Intel(R) Core(TM) i5-14600KF",
+    "threads": 19,
+    "ram_gib": 62,
+    "disk_total": "1.9T"
+  },
+  "build": {
+    "command": "lake build Main",
+    "supervisor": "systemd unit rh-build.service (Restart=on-failure), loop /root/rh_build_loop.sh",
+    "started_at": "2026-11-21T02:26:41+08:00",
+    "finished_at": "2026-11-22T08:04:12+08:00",
+    "rounds": 1,
+    "exit_code": 0,
+    "service_result": "status=0/SUCCESS",
+    "modules_total": 175187,
+    "modules_built": 175187,
+    "ilean_count": 175187,
+    "errors": 0,
+    "lake_dir_bytes": 1294423698907,
+    "log": {
+      "file": "build7.log",
+      "bytes": 178976744,
+      "sha256": "573b516655397a84746b90241bc373386642b1db663b0a6c02d5bdcb357b1786",
+      "lines": 2427878
+    },
+    "log_markers": [
+      "START 2026-11-21T02:26:41+08:00 host=xiaomeng nproc=19",
+      "=== ROUND 1 CPUS=0-17 2026-11-21T02:26:41+08:00 ===",
+      "START 2026-11-21T02:26:58+08:00 host=xiaomeng nproc=19",
+      "=== ROUND 1 CPUS=0-17 2026-11-21T02:26:58+08:00 ===",
+      "START 2026-11-21T02:30:22+08:00 host=xiaomeng nproc=19",
+      "=== ROUND 1 CPUS=0-17 2026-11-21T02:30:22+08:00 ===",
+      "START 2026-11-21T02:33:52+08:00 host=xiaomeng nproc=19",
+      "=== ROUND 1 CPUS=0-18 2026-11-21T02:33:52+08:00 ===",
+      "=== ROUND 1 EXIT=0 2026-11-22T08:04:12+08:00 ===",
+      "ALL_DONE 2026-11-22T08:04:12+08:00"
+    ]
+  },
+  "artifacts": [
+    {
+      "issue": 213,
+      "module_id": "M175185",
+      "module": "Supplements.Kernels.MainTheorems",
+      "olean": {
+        "bytes": 18664,
+        "sha256": "ccf715ec0e2be6075cefe8cae3f43de6e18501959fa768970b1e11d81683d02f"
+      },
+      "ilean": {
+        "bytes": 3655,
+        "sha256": "aedf152876a3f6a13a0fea27cb0085f206d9f968d88da62850354e07f65b3879"
+      }
+    },
+    {
+      "issue": 211,
+      "module_id": "M175187",
+      "module": "Supplements.Kernels.MainTheoremsCritical",
+      "olean": {
+        "bytes": 2328,
+        "sha256": "eb7c6afb97575c898882e2829f3f554789d48748a38e9187ed01f7b932ae4293"
+      },
+      "ilean": {
+        "bytes": 489,
+        "sha256": "2f66c88b31ec74efb620d8670f1bdd11c65f0e4f49c8770475f2b929d8efa461"
+      }
+    },
+    {
+      "issue": 208,
+      "module_id": "M175186",
+      "module": "Supplements.Kernels.MainTheoremsAll",
+      "olean": {
+        "bytes": 2096,
+        "sha256": "5c7414d12b8803f76ac1b701fb77c87b2e65f861c5381e812b41ddd16c06efeb"
+      },
+      "ilean": {
+        "bytes": 271,
+        "sha256": "47223217b6187941331e79b029bc40d99ec3d123e7c9b352df861dd96f5c4c27"
+      }
+    },
+    {
+      "issue": 214,
+      "module_id": "M108233",
+      "module": "Development.AutomorphicArithmetic.AutomorphicVarieties.SmallClassNumbers.CorGKOf",
+      "olean": {
+        "bytes": 45048,
+        "sha256": "01fadc740eaf5ab9a8eeed915fa17e21946bd80c0d2d23154f90d745e2f7796d"
+      },
+      "ilean": {
+        "bytes": 12090,
+        "sha256": "a6d6b95141140576c5bf58061b3f19af32255d27a0a7b47f8908bfce3d35b425"
+      }
+    },
+    {
+      "issue": 215,
+      "module_id": "M109322",
+      "module": "Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion",
+      "olean": {
+        "bytes": 20152,
+        "sha256": "96f053d27b81461fcf5ca2fe9a234384bc6ead9697de76cee37e13686aa156df"
+      },
+      "ilean": {
+        "bytes": 3903,
+        "sha256": "f4a95cfde86e9bf2d799d43c258b93eb732513bb6bd20dc0c66e1359e89b7e52"
+      }
+    },
+    {
+      "issue": 204,
+      "module_id": "M170889",
+      "module": "Main",
+      "olean": {
+        "bytes": 7872,
+        "sha256": "9146dfb4148e24d2252e04c50742f3e49dd126dfcc5006d10bf5f873ddf796ad"
+      },
+      "ilean": {
+        "bytes": 2503,
+        "sha256": "f32681e70e29e9cce1ea1af8499d46d77ad18e64bbe7ae4ef2b324cef494b109"
+      }
+    }
+  ],
+  "packets": [
+    {
+      "issue": 20089,
+      "packet": "P2118",
+      "modules_total": 64,
+      "modules_present": 64,
+      "missing": 0,
+      "manifest_digest_scheme": "sha256 of sorted lines 'module olean_bytes olean_sha256 ilean_bytes ilean_sha256'",
+      "manifest_digest": "fd80054a78b3eff5fb538b28e7407721b903a97c4d599bcad2e8f1265f4171bf"
+    },
+    {
+      "issue": 20100,
+      "packet": "P2105",
+      "modules_total": 64,
+      "modules_present": 64,
+      "missing": 0,
+      "manifest_digest_scheme": "sha256 of sorted lines 'module olean_bytes olean_sha256 ilean_bytes ilean_sha256'",
+      "manifest_digest": "8a32ad9f47a356eee890a0322e85550ef17037f10625af21de01173e2272eecf"
+    },
+    {
+      "issue": 20105,
+      "packet": "P2077",
+      "modules_total": 64,
+      "modules_present": 64,
+      "missing": 0,
+      "manifest_digest_scheme": "sha256 of sorted lines 'module olean_bytes olean_sha256 ilean_bytes ilean_sha256'",
+      "manifest_digest": "348db96ada57394056867e7a3033f0692d534b90b5347d88ce0264b6be1d5317"
+    }
+  ],
+  "audit": {
+    "file": "AxiomCheck.lean",
+    "file_sha256": "9d6e2aae8260e4926914e3cd61d9117f5221f168de1fdc2c671d883abc25594f",
+    "source": "import Main\n\n#print axioms riemannHypothesis\n#print axioms riemannZeta_eq_zero_re\n#print axioms LFunction_ne_zero_of_half_lt_re\n#print axioms LFunction_eq_zero_re\n#print axioms LFunction_eq_zero_re_of_isPrimitive\n",
+    "command": "lake env lean AxiomCheck.lean",
+    "exit_code": 0,
+    "elapsed_seconds": 29,
+    "text_output_file": "axioms.txt",
+    "text_output_sha256": "2c7b168860c39a4b4afd417a327bbbd8a2a0615372655c5d4bd329fb06e7f3d5",
+    "text_output": "'riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]\n'riemannZeta_eq_zero_re' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFunction_ne_zero_of_half_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFunction_eq_zero_re' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LFunction_eq_zero_re_of_isPrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "json_output_file": "axioms-json.jsonl",
+    "json_output_sha256": "f93e202c1a9f10c2ab5e41c209e85470ecf407f64f87042a7b1ecfe980e75eb2",
+    "json_output_lines": 5,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "result": "PASS"
+  },
+  "static_scan": {
+    "sorry": 0,
+    "admit": 0,
+    "axiom": 0,
+    "native_decide": 0,
+    "implemented_by": 0,
+    "unsafe": 0,
+    "extern": 0,
+    "opaque": 0,
+    "files_scanned": 175187
+  },
+  "verdict": {
+    "replay_source_build_passed": true,
+    "replay_axiom_audit_passed": true,
+    "replay_fresh_kernel_passed": "not performed (lean4checker not installed)",
+    "mathematical_correctness": "not assessed"
+  }
+}
