@@ -293,7 +293,30 @@
   "verdict": {
     "replay_source_build_passed": true,
     "replay_axiom_audit_passed": true,
-    "replay_fresh_kernel_passed": "not performed (lean4checker not installed)",
-    "mathematical_correctness": "not assessed"
+    "replay_fresh_kernel_passed": "in progress (started 2026-11-22T17:05:25+08:00)",
+    "mathematical_correctness": "not assessed",
+    "replay_module_kernel_passed": true
+  },
+  "kernel_checks": {
+    "leanchecker_version": "error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.",
+    "module_scope": {
+      "command": "lake env leanchecker Main",
+      "meaning": "replays the declarations defined in module Main, starting from the environment provided by its imports",
+      "exit_code": 0,
+      "elapsed_seconds": 42,
+      "result": "PASS",
+      "log_file": "leanchecker-Main.log",
+      "log_bytes": 0,
+      "note": "built-in checker (leanprover/lean4checker is deprecated and merged into Lean as leanchecker)"
+    },
+    "fresh_scope": {
+      "command": "lake env leanchecker --fresh Main",
+      "meaning": "replays every declaration reachable from Main into a genuinely fresh environment",
+      "started_at": "2026-11-22T17:05:25+08:00",
+      "status": "IN_PROGRESS",
+      "log_file": "leanchecker-fresh.log",
+      "log_sha256": "e8e0a0a8b5ce6a8db25241ed5f72a42b3b7c58d54e56d984eb75df2d5ca824fb",
+      "log_content": "START 2026-11-22T17:05:25+08:00"
+    }
   }
 }
