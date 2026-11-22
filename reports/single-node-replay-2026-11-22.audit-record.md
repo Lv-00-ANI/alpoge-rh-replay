@@ -48,7 +48,18 @@ SHA256 of the captured text: `2c7b168860c39a4b4afd417a327bbbd8a2a0615372655c5d4b
 | Custom axioms present | none |
 | `sorryAx` present | none |
 
-## 6. What this does and does not establish
+## 6. Kernel replay
+
+`leanprover/lean4checker` is deprecated; the checker is now shipped inside Lean as `leanchecker` and is therefore the same implementation that any reader obtains by installing toolchain 4.33.1. Two scopes were run:
+
+| Command | Scope | Result |
+|---|---|---|
+| `lake env leanchecker Main` | declarations **defined in** module `Main`, against the environment provided by its imports | **PASS**, exit 0, 42 s |
+| `lake env leanchecker --fresh Main` | **every** declaration reachable from `Main`, replayed into a genuinely fresh environment | **in progress** — started 2026-11-22T17:05:25+08:00, still running; single-threaded by design |
+
+The fresh replay is single-threaded (replaying into a fresh environment requires dependency order), so it cannot be parallelised. Its log (`leanchecker-fresh.log`, SHA256 `e8e0a0a8b5ce6a8db25241ed5f72a42b3b7c58d54e56d984eb75df2d5ca824fb`) is retained on the host.
+
+## 7. What this does and does not establish
 
 Establishes: the five propositions exported by `Main` are kernel-checked from the archive's own material, with no assumptions beyond Lean's three standard axioms.
 
