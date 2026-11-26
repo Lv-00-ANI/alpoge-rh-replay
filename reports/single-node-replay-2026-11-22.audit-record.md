@@ -50,14 +50,26 @@ SHA256 of the captured text: `2c7b168860c39a4b4afd417a327bbbd8a2a0615372655c5d4b
 
 ## 6. Kernel replay
 
-`leanprover/lean4checker` is deprecated; the checker is now shipped inside Lean as `leanchecker` and is therefore the same implementation that any reader obtains by installing toolchain 4.33.1. Two scopes were run:
+`leanprover/lean4checker` is deprecated; the checker now ships inside Lean as `leanchecker`, so it is the same implementation any reader obtains by installing toolchain 4.33.1. Two scopes were run:
 
-| Command | Scope | Result |
-|---|---|---|
-| `lake env leanchecker Main` | declarations **defined in** module `Main`, against the environment provided by its imports | **PASS**, exit 0, 42 s |
-| `lake env leanchecker --fresh Main` | **every** declaration reachable from `Main`, replayed into a genuinely fresh environment | **in progress** — started 2026-11-22T17:05:25+08:00, still running; single-threaded by design |
+| Command | Scope | Result | Elapsed |
+|---|---|---|---|
+| `lake env leanchecker Main` | declarations **defined in** module `Main`, against the environment supplied by its imports | **PASS** (exit 0) | 42 s |
+| `lake env leanchecker --fresh Main` | **every** declaration reachable from `Main`, replayed into a genuinely fresh environment | **PASS** (exit 0) | **9 h 14 min** |
 
-The fresh replay is single-threaded (replaying into a fresh environment requires dependency order), so it cannot be parallelised. Its log (`leanchecker-fresh.log`, SHA256 `e8e0a0a8b5ce6a8db25241ed5f72a42b3b7c58d54e56d984eb75df2d5ca824fb`) is retained on the host.
+The fresh replay is single-threaded by design (replaying into a fresh environment requires dependency order), which is why it took 9 hours and held ~45 GiB resident.
+
+Logs (both retained on the build host; digests below pin them):
+
+```
+leanchecker-Main.log   0 bytes  (checker is silent on success)
+                       sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+leanchecker-fresh.log  64 bytes sha256 2d290f23a62e61edb92a540aa783ee0579a546cc60334e40ef7ef1175ad913f7
+                       content:
+                       START 2026-11-22T17:05:25+08:00
+                       EXIT=0 2026-11-23T02:19:24+08:00
+```
 
 ## 7. What this does and does not establish
 
