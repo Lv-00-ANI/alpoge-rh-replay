@@ -293,7 +293,7 @@
   "verdict": {
     "replay_source_build_passed": true,
     "replay_axiom_audit_passed": true,
-    "replay_fresh_kernel_passed": "in progress (started 2026-11-22T17:05:25+08:00)",
+    "replay_fresh_kernel_passed": true,
     "mathematical_correctness": "not assessed",
     "replay_module_kernel_passed": true
   },
@@ -307,16 +307,24 @@
       "result": "PASS",
       "log_file": "leanchecker-Main.log",
       "log_bytes": 0,
-      "note": "built-in checker (leanprover/lean4checker is deprecated and merged into Lean as leanchecker)"
+      "note": "built-in checker (leanprover/lean4checker is deprecated and merged into Lean as leanchecker)",
+      "log_note": "checker prints nothing on success; captured log is empty (0 bytes)",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "fresh_scope": {
       "command": "lake env leanchecker --fresh Main",
       "meaning": "replays every declaration reachable from Main into a genuinely fresh environment",
       "started_at": "2026-11-22T17:05:25+08:00",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED",
       "log_file": "leanchecker-fresh.log",
-      "log_sha256": "e8e0a0a8b5ce6a8db25241ed5f72a42b3b7c58d54e56d984eb75df2d5ca824fb",
-      "log_content": "START 2026-11-22T17:05:25+08:00"
+      "log_sha256": "2d290f23a62e61edb92a540aa783ee0579a546cc60334e40ef7ef1175ad913f7",
+      "log_content": "START 2026-11-22T17:05:25+08:00\nEXIT=0 2026-11-23T02:19:24+08:00",
+      "exit_code": 0,
+      "result": "PASS",
+      "finished_at": "2026-11-23T02:19:24+08:00",
+      "elapsed_seconds": 33240,
+      "elapsed_human": "9 h 14 min",
+      "log_note": "checker prints nothing on success; only START/EXIT markers are present"
     }
   }
 }
